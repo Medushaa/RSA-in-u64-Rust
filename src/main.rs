@@ -69,15 +69,15 @@ fn modular_exponent(mut num:u64 ,mut exp:u64 , modulus:u64) -> u64{
 // }
 
 
-// Extended Euclidean ALgorithm (chatgpt-ed :3)
+// Extended Euclidean ALgorithm 
 fn mod_inverse(a: u64, m: u64) -> u64 {
-    let (mut t, mut new_t) = (0_i64, 1_i64);
-    let (mut r, mut new_r) = (m as i64, a as i64);
+    let (mut t, mut new_t) = (0_i64, 1_i64); //t, t'
+    let (mut r, mut new_r) = (m as i64, a as i64); //r, r'
 
     while new_r != 0 {
-        let quotient = r / new_r;
-        let temp_t = t - quotient * new_t;
-        let temp_r = r - quotient * new_r;
+        let q = r / new_r;
+        let temp_t = t - q * new_t;
+        let temp_r = r - q * new_r;
         t = new_t;
         new_t = temp_t;
         r = new_r;
