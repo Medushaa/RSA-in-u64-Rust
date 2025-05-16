@@ -1,3 +1,5 @@
+# RSA implementation with Rust and Python
+
 First I implemented the RSA algorithm following the equations in Python, since it'll be easy. 
 
 I used very small sized key values to be able to follow along the process without using complex algorithms that the real RSA uses to calculate faster on verrryyyy HUGE numbers. 
